@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Farminika</string>
+    <string name="cd_logo_image">logo_image</string>
+    <string name="welcome_description">Farminika is a platform that helps farmers to connect to Experts. Are you an Expert or a Farmer?</string>
+    <string name="welcome">Welcome</string>
+    <string name="farminika_name">F A R M I N I K A</string>
+    <string name="back">back</string>
+    <string name="sign_up_text">Sign Up</string>
+    <string name="education">Education</string>
+    <string name="area_of_expertise">Area of Expertise</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="sign_uplarge">SIGN UP</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="sign_in_text">Sign In</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="farmer">FARMER</string>
+    <string name="expert">EXPERT</string>
+    <string name="provide_text">Please provide us with the following details inorder to register you.</string>
+    <string name="provide_text_1">Please help us with your email and password for verification.</string>
+    <string name="sign_in_large">SIGN IN</string>
+    <string name="sign_out">SIGN OUT</string>
+    <string name="hello_text">HELLO</string>
+    <string name="dummy_name_large">KEITH CHAD</string>
+    <string name="are_you_looking_for_goods_or_services">ARE YOU LOOKING FOR GOODS OR SERVICES?</string>
+    <string name="are_you_offering_goods_or_services">ARE YOU OFFERING GOODS OR SERVICES?</string>
+    <string name="info_text">INFO</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

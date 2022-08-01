@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "56096496252",
+    "project_id": "farminika-fbd0d",
+    "storage_bucket": "farminika-fbd0d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:56096496252:android:3d80feafdc583912fe87f9",
+        "android_client_info": {
+          "package_name": "com.farminikagroup.farminika"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "56096496252-4mnduua4168vk244pelbjltm3fvvrhg2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKT7i3faifDfRSVjCf7f5K8Lu-NOindpQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "56096496252-4mnduua4168vk244pelbjltm3fvvrhg2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
