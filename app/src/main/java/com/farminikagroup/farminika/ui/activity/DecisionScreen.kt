@@ -17,7 +17,6 @@ import kotlinx.android.synthetic.main.bottom_sheet_layout.*
 
 class DecisionScreen : AppCompatActivity() {
     private lateinit var firebaseAuth: FirebaseAuth
-    private lateinit var bottomBehavior: BottomSheetBehavior<ConstraintLayout>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome_screen)

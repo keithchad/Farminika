@@ -7,6 +7,7 @@ import android.view.View
 import com.farminikagroup.farminika.ui.activity.DecisionScreen
 import com.farminikagroup.farminika.data.utils.Extensions.toast
 import com.farminikagroup.farminika.R
+import com.farminikagroup.farminika.ui.activity.MainActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
@@ -58,7 +59,7 @@ class SignUpScreen : AppCompatActivity() {
                 //lottie.visibility = View.INVISIBLE
                 signupButton.visibility = View.VISIBLE
                 if(it.isSuccessful) {
-                    val intent = Intent(this, DecisionScreen::class.java)
+                    val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                     finish()
                     sendEmailVerification(email)

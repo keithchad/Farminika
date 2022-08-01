@@ -6,12 +6,16 @@
         <entry key="app/src/main/res/drawable-v24/rounded_corners_white_welcome.xml" value="0.179" />
         <entry key="app/src/main/res/drawable/rounded_corners.xml" value="0.179" />
         <entry key="app/src/main/res/drawable/rounded_corners_white.xml" value="0.18" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_sign_in_screen.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_starting_screen.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_welcome_screen.xml" value="0.2" />
         <entry key="app/src/main/res/layout/bottom_sheet_layout.xml" value="0.17135416666666667" />
+        <entry key="app/src/main/res/layout/fragment_blog.xml" value="0.17135416666666667" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.17135416666666667" />
+        <entry key="app/src/main/res/layout/fragment_message.xml" value="0.17135416666666667" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.17135416666666667" />
         <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.17135416666666667" />
       </map>
     </option>

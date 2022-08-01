@@ -2,7 +2,6 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
-    id 'androidx.navigation.safeargs'
 }
 
 apply plugin: 'kotlin-android-extensions'
@@ -84,9 +83,6 @@ dependencies {
 
     //Swipe Refresh Layout
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
-
-    //Bubble Navigation
-    implementation 'com.gauravk.bubblenavigation:bubblenavigation:1.0.7'
 
     //Navigation
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.1'
