@@ -14,23 +14,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//        bottomNavigation.setOnItemSelectedListener(object: NavigationBarView.OnItemSelectedListener{
-//            override fun onNavigationItemSelected(item: MenuItem): Boolean {
-//                when (item.itemId) {
-//                    R.id.home ->
-//                    R.id.blog ->
-//                    R.id.chat ->
-//                    R.id.profile ->
-//                }
-//               return true
-//            }
-//
-//        })
+
     }
 
-//    fun replaceFragment() {
-//        val fragmentManager: FragmentManager = supportFragmentManager
-//        val fragmentTransaction: androidx.fragment.app.FragmentTransaction = fragmentManager.beginTransaction()
-//        fragment
-//    }
+
 }
