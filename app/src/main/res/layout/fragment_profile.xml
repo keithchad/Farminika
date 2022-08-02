@@ -59,7 +59,7 @@
         android:fontFamily="@font/ubuntu_regular"
         android:text="Farmer"
         android:layout_marginStart="10dp"
-        android:textColor="#0120B9"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:padding="4dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -102,7 +102,7 @@
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="90dp"
         android:layout_height="90dp"
-        android:src="@drawable/test_photo"
+        android:src="@drawable/dummy_photo"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="30dp"
         android:layout_marginTop="20dp"
@@ -111,7 +111,7 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/rounded_corners_white"
         android:orientation="vertical"
         android:padding="20dp"
@@ -129,13 +129,140 @@
             android:fontFamily="@font/ubuntu_bold"
             android:textSize="25sp"/>
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/imageName"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="Name"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@id/imageName"
+                app:layout_constraintTop_toTopOf="@+id/imageName" />
+
+            <TextView
+                android:id="@+id/textNameProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_regular"
+                android:text="Keith Chad"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/textName"
+                app:layout_constraintTop_toBottomOf="@+id/textName" />
+
+            <ImageView
+                android:id="@+id/imageNumber"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/phone_number"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageName" />
+
+            <TextView
+                android:id="@+id/textNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="Mobile Number"
+                android:layout_marginStart="6dp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@id/imageNumber"
+                app:layout_constraintTop_toTopOf="@+id/imageNumber" />
+
+            <TextView
+                android:id="@+id/textNumberProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_regular"
+                android:text="+254702853776"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/textNumber"
+                app:layout_constraintTop_toBottomOf="@+id/textNumber" />
+
+            <ImageView
+                android:id="@+id/imageEmail"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/email"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageNumber" />
+
+            <TextView
+                android:id="@+id/textEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="Email"
+                android:layout_marginStart="6dp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@id/imageEmail"
+                app:layout_constraintTop_toTopOf="@+id/imageEmail" />
+
+            <TextView
+                android:id="@+id/textEmailProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_regular"
+                android:text="keithchad6@gmail.com"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/textEmail"
+                app:layout_constraintTop_toBottomOf="@+id/textEmail" />
+
+            <ImageView
+                android:id="@+id/imageLocation"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/location"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageEmail" />
+
+            <TextView
+                android:id="@+id/textLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="Location"
+                android:layout_marginStart="6dp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@id/imageLocation"
+                app:layout_constraintTop_toTopOf="@+id/imageLocation" />
+
+            <TextView
+                android:id="@+id/textLocationProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_regular"
+                android:text="Nairobi,Kenya"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/textLocation"
+                app:layout_constraintTop_toBottomOf="@+id/textLocation" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/rounded_corners_white"
         android:orientation="vertical"
         android:padding="30dp"
@@ -144,6 +271,50 @@
         android:layout_marginEnd="20dp"
         android:elevation="10dp"
         app:layout_constraintTop_toBottomOf="@id/linearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other Info"
+            android:textColor="@color/black"
+            android:fontFamily="@font/ubuntu_bold"
+            android:textSize="25sp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/imageDateJoined"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/join"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textDateJoined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="Date Joined"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@id/imageDateJoined"
+                app:layout_constraintTop_toTopOf="@+id/imageDateJoined" />
+
+            <TextView
+                android:id="@+id/textDateJoinedProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_regular"
+                android:text="Joined on July 2020"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@+id/textDateJoined"
+                app:layout_constraintTop_toBottomOf="@+id/textDateJoined" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </LinearLayout>
