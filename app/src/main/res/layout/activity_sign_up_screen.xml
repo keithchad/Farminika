@@ -174,16 +174,34 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/signupButton"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/sign_uplarge"
-            android:fontFamily="@font/ubuntu_medium"
-            app:layout_constraintEnd_toEndOf="@+id/editTextPasswordSignIn"
-            app:layout_constraintStart_toStartOf="@+id/editTextPasswordSignIn"
-            app:layout_constraintTop_toBottomOf="@+id/editTextPasswordSignIn" />
+            android:layout_marginTop="20dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/signupButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="@string/sign_uplarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/signUpProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/signupButton"
+                app:layout_constraintEnd_toEndOf="@+id/signupButton"
+                app:layout_constraintStart_toStartOf="@+id/signupButton"
+                app:layout_constraintTop_toTopOf="@+id/signupButton" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
         <TextView
             android:id="@+id/signUp"
@@ -198,19 +216,6 @@
             app:layout_constraintEnd_toEndOf="@+id/signinButton"
             app:layout_constraintStart_toStartOf="@+id/signinButton"
             app:layout_constraintTop_toBottomOf="@+id/signinButton" />
-
-<!--        <com.airbnb.lottie.LottieAnimationView-->
-<!--            android:id="@+id/lottie"-->
-<!--            android:layout_width="100dp"-->
-<!--            android:layout_height="100dp"-->
-<!--            android:visibility="invisible"-->
-<!--            app:layout_constraintBottom_toBottomOf="@+id/signupButton"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/signupButton"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/signupButton"-->
-<!--            app:layout_constraintTop_toTopOf="@+id/signupButton"-->
-<!--            app:lottie_autoPlay="true"-->
-<!--            app:lottie_loop="true"-->
-<!--            app:lottie_rawRes="@raw/loading_anim4" />-->
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/textSignIn"

@@ -2,9 +2,9 @@
 <resources>
     <color name="green_200">#35D186</color>
     <color name="green_500">#35D186</color>
-    <color name="green_700">#108A4F</color>
-    <color name="pink_400">#E91E63</color>
-    <color name="pink_700">#B90140</color>
+    <color name="green_700">#35D186</color>
+    <color name="pink_400">#35D186</color>
+    <color name="pink_700">#35D186</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

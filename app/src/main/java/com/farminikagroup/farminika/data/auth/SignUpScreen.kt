@@ -33,11 +33,9 @@ class SignUpScreen : AppCompatActivity() {
     //Initialize Firebase
     private fun initializeFirebase() {
 
-        val intentExtra = Intent()
-        val profession = intentExtra.getStringExtra(Constants.INTENT_EXTRA_PROFESSION)
+        val profession = intent.getStringExtra(Constants.INTENT_EXTRA_PROFESSION)
 
         if (profession != null) {
-            toast(profession)
 
             if (profession == Constants.INTENT_EXTRA_FARMER) {
                 inputLayoutEducation.visibility = View.GONE
