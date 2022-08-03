@@ -3,11 +3,9 @@ package com.farminikagroup.farminika.ui.activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
 import com.farminikagroup.farminika.R
 import com.farminikagroup.farminika.data.utils.Extensions.toast
 import com.farminikagroup.farminika.data.auth.SignUpScreen
-import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -21,15 +19,19 @@ class DecisionScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome_screen)
 
-        initializeSignOut()
+        signOutUser()
         initializeBottomSheet()
     }
 
-    private fun initializeSignOut() {
+    //Sign Out User
+    private fun signOutUser() {
+
+        firebaseAuth = Firebase.auth
+
         signOutButton.setOnClickListener {
-            firebaseAuth = Firebase.auth
             firebaseAuth.signOut()
             toast("User has been signed out")
+
             val intent = Intent(this, SignUpScreen::class.java)
             startActivity(intent)
             finish()
@@ -37,6 +39,7 @@ class DecisionScreen : AppCompatActivity() {
         }
     }
 
+    //Initialize BottomSheet
     private fun initializeBottomSheet() {
         infoButton.setOnClickListener {
             val bottomSheet = BottomSheetDialog(this)
