@@ -9,7 +9,11 @@
         android:id="@+id/homeFragment"
         android:name="com.farminikagroup.farminika.ui.fragment.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_sectorBottomSheet"
+            app:destination="@id/sectorBottomSheet" />
+    </fragment>
     <fragment
         android:id="@+id/blogFragment"
         android:name="com.farminikagroup.farminika.ui.fragment.BlogFragment"
@@ -25,4 +29,8 @@
         android:name="com.farminikagroup.farminika.ui.fragment.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <dialog
+        android:id="@+id/sectorBottomSheet"
+        android:name="com.farminikagroup.farminika.ui.SectorBottomSheet"
+        android:label="SectorBottomSheet" />
 </navigation>
