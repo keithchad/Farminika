@@ -3,9 +3,11 @@ package com.farminikagroup.farminika.data.auth
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import com.farminikagroup.farminika.R
-import com.farminikagroup.farminika.data.model.User
+import com.farminikagroup.farminika.data.model.ExpertUser
+import com.farminikagroup.farminika.data.model.FarmerUser
 import com.farminikagroup.farminika.data.utils.Constants
 import com.farminikagroup.farminika.data.utils.Extensions.toast
 import com.farminikagroup.farminika.ui.activity.MainActivity
@@ -23,17 +25,21 @@ class SignUpScreen : AppCompatActivity() {
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var firebaseUser: FirebaseUser
     private lateinit var databaseReference: DatabaseReference
+    private var profession: String? = null
+    private lateinit var dropDownList: List<String>
+    private var sector: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up_screen)
+        setUpDropDownList()
         initializeFirebase()
     }
 
     //Initialize Firebase
     private fun initializeFirebase() {
 
-        val profession = intent.getStringExtra(Constants.INTENT_EXTRA_PROFESSION)
+        profession = intent.getStringExtra(Constants.INTENT_EXTRA_PROFESSION)
 
         if (profession != null) {
 
@@ -94,20 +100,43 @@ class SignUpScreen : AppCompatActivity() {
         val userName = "user01"
         val name = editTextName.text.toString()
         val email = editTextEmail.text.toString()
+        val education = editTextEducation.text.toString()
+        val sector = sector
         val location = "Unknown"
         val phoneNumber = "Empty"
         val profileImage = ""
+        val profession = profession
 
-        databaseReference = FirebaseDatabase.getInstance().getReference("Users").child(userId)
-        val user = User(userId, profileImage, name, userName, email, location, phoneNumber)
+        if(profession == Constants.INTENT_EXTRA_FARMER) {
+            databaseReference = FirebaseDatabase.getInstance().getReference("Farmer").child(userId)
 
-        databaseReference.setValue(user).addOnSuccessListener {
-            editTextName.text.clear()
-            editTextEmail.text.clear()
-            toast("Data has been successfully saved")
-        }. addOnFailureListener{
-            toast("Failed to saved Data")
+            val user = FarmerUser(userId, profileImage, name, userName,
+                email, location, phoneNumber, profession)
+
+            databaseReference.setValue(user).addOnSuccessListener {
+                editTextName.text.clear()
+                editTextEmail.text.clear()
+                toast("Data has been successfully saved")
+            }. addOnFailureListener{
+                toast("Failed to saved Data")
+            }
+
+        } else if(profession == Constants.INTENT_EXTRA_EXPERT) {
+            databaseReference = FirebaseDatabase.getInstance().getReference("Expert").child(userId)
+
+            val user = ExpertUser(userId, profileImage, name, userName, email,
+                location, phoneNumber, sector!!, education, profession)
+
+            databaseReference.setValue(user).addOnSuccessListener {
+                editTextName.text.clear()
+                editTextEmail.text.clear()
+                toast("Data has been successfully saved")
+            }. addOnFailureListener{
+                toast("Failed to saved Data")
+            }
         }
+
+
     }
 
     //Send Email Verification to User Email
@@ -119,6 +148,36 @@ class SignUpScreen : AppCompatActivity() {
                 toast("Email has been sent to $email")
             }
         }
+    }
+
+    private fun setUpDropDownList() {
+        dropDownList = listOf(
+            "Fish Farming",
+            "Horticulture",
+            "Bee Keeping",
+            "Tea & Coffee",
+            "Grain Farming",
+            "Fertilizers and Pesticides"
+        )
+        val adapterItems: ArrayAdapter<String> = ArrayAdapter(this,
+            R.layout.drop_down_list_item, dropDownList)
+        dropdownSector.setAdapter(adapterItems)
+        dropdownSector.setOnItemClickListener { parent, _, position, _ ->
+            sector = parent.getItemAtPosition(position).toString()
+        }
+    }
+
+    private fun getProfession() {
+        //instantiate Viewmodel
+//        extraViewModel = ViewModelProvider(this)[ExtraViewModel::class.java]
+//        extraViewModel.profession.observe(requireActivity()) {
+//            if (it != null) {
+//                Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show()
+//            }else {
+//                Toast.makeText(requireActivity(), "profession is null", Toast.LENGTH_SHORT).show()
+//            }
+//            //profession = it
+//        }
     }
 
 }

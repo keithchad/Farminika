@@ -134,15 +134,15 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/inputLayoutExpertise"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/editTextExpertise"
+            <AutoCompleteTextView
+                android:id="@+id/dropdownSector"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/area_of_expertise"
+                android:hint="Sector"
                 android:fontFamily="@font/ubuntu_regular"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

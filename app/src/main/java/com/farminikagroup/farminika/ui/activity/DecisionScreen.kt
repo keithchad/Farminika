@@ -19,25 +19,11 @@ class DecisionScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome_screen)
 
-        signOutUser()
         initializeBottomSheet()
     }
 
     //Sign Out User
-    private fun signOutUser() {
 
-        firebaseAuth = Firebase.auth
-
-        signOutButton.setOnClickListener {
-            firebaseAuth.signOut()
-            toast("User has been signed out")
-
-            val intent = Intent(this, SignUpScreen::class.java)
-            startActivity(intent)
-            finish()
-
-        }
-    }
 
     //Initialize BottomSheet
     private fun initializeBottomSheet() {

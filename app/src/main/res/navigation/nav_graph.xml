@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homeFragment_to_sectorBottomSheet"
             app:destination="@id/sectorBottomSheet" />
+        <action
+            android:id="@+id/action_homeFragment_to_introScreenActivity"
+            app:destination="@id/introScreenActivity" />
     </fragment>
     <fragment
         android:id="@+id/blogFragment"
@@ -33,4 +36,9 @@
         android:id="@+id/sectorBottomSheet"
         android:name="com.farminikagroup.farminika.ui.SectorBottomSheet"
         android:label="SectorBottomSheet" />
+    <activity
+        android:id="@+id/introScreenActivity"
+        android:name="com.farminikagroup.farminika.ui.activity.IntroScreenActivity"
+        android:label="activity_splash_screen"
+        tools:layout="@layout/activity_splash_screen" />
 </navigation>

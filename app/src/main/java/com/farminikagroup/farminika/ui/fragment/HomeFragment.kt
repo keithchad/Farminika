@@ -27,6 +27,7 @@ class HomeFragment : Fragment() {
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var sectorViewModel: SectorViewModel
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -41,7 +42,20 @@ class HomeFragment : Fragment() {
         sectorViewModel.sector.observe(requireActivity()){
             Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show()
         }
+
         return view
+    }
+
+    private fun signOutUser() {
+
+        firebaseAuth = Firebase.auth
+
+        signOutButton.setOnClickListener {
+            firebaseAuth.signOut()
+
+            findNavController().navigate(R.id.action_homeFragment_to_introScreenActivity)
+
+        }
     }
 
 
