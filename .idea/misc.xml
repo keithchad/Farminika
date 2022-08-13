@@ -15,7 +15,9 @@
         <entry key="app/src/main/res/layout/blog_item.xml" value="0.25" />
         <entry key="app/src/main/res/layout/bottom_sheet_layout.xml" value="0.17135416666666667" />
         <entry key="app/src/main/res/layout/drop_down_list_item.xml" value="0.1405982905982906" />
+        <entry key="app/src/main/res/layout/expert_list_item.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_blog.xml" value="0.11392405063291139" />
+        <entry key="app/src/main/res/layout/fragment_expert.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_message.xml" value="0.1405982905982906" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.25" />
