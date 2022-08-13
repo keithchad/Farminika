@@ -35,10 +35,23 @@
     <dialog
         android:id="@+id/sectorBottomSheet"
         android:name="com.farminikagroup.farminika.ui.SectorBottomSheet"
-        android:label="SectorBottomSheet" />
+        android:label="SectorBottomSheet" >
+        <action
+            android:id="@+id/action_sectorBottomSheet_to_expertFragment"
+            app:destination="@id/expertFragment" />
+    </dialog>
     <activity
         android:id="@+id/introScreenActivity"
         android:name="com.farminikagroup.farminika.ui.activity.IntroScreenActivity"
         android:label="activity_splash_screen"
         tools:layout="@layout/activity_splash_screen" />
+    <fragment
+        android:id="@+id/expertFragment"
+        android:name="com.farminikagroup.farminika.ui.fragment.ExpertFragment"
+        android:label="fragment_expert"
+        tools:layout="@layout/fragment_expert" >
+        <action
+            android:id="@+id/action_expertFragment_to_messageFragment"
+            app:destination="@id/messageFragment" />
+    </fragment>
 </navigation>
