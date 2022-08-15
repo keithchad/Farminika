@@ -19,6 +19,7 @@
         <entry key="app/src/main/res/layout/fragment_blog.xml" value="0.11392405063291139" />
         <entry key="app/src/main/res/layout/fragment_expert.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_information.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_message.xml" value="0.1405982905982906" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="app/src/main/res/layout/sector_layout.xml" value="0.2" />

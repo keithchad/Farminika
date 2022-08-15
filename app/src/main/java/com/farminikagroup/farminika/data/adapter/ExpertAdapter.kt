@@ -37,7 +37,7 @@ class ExpertAdapter(var list: List<Expert>, var context: Context) : RecyclerView
             itemView.textNameExpert.text = expert.name
             itemView.textNameExpert.setOnClickListener {
                 navController = Navigation.findNavController(itemView)
-                navController.navigate(R.id.action_expertFragment_to_messageFragment)
+                navController.navigate(R.id.action_expertFragment_to_informationFragment)
             }
         }
 
