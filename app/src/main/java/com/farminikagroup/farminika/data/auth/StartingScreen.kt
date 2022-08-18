@@ -6,8 +6,7 @@ import android.os.Bundle
 import android.view.animation.AnimationUtils
 import androidx.lifecycle.ViewModelProvider
 import com.farminikagroup.farminika.R
-import com.farminikagroup.farminika.data.ExtraViewModel
-import com.farminikagroup.farminika.data.SectorViewModel
+import com.farminikagroup.farminika.data.viewmodel.ExtraViewModel
 import com.farminikagroup.farminika.data.utils.Constants
 import kotlinx.android.synthetic.main.activity_starting_screen.*
 

@@ -1,4 +1,4 @@
-package com.farminikagroup.farminika.data
+package com.farminikagroup.farminika.data.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

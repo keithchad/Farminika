@@ -5,17 +5,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.farminikagroup.farminika.R
-import com.farminikagroup.farminika.data.SectorViewModel
+import com.farminikagroup.farminika.data.viewmodel.SectorViewModel
 import com.farminikagroup.farminika.data.adapter.ExpertAdapter
 import com.farminikagroup.farminika.data.model.Expert
+import com.farminikagroup.farminika.data.viewmodel.UserViewModel
+import com.farminikagroup.farminika.databinding.FragmentExpertBinding
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -25,8 +25,10 @@ import kotlinx.android.synthetic.main.fragment_expert.*
 
 class ExpertFragment : Fragment() {
 
+
     lateinit var list: ArrayList<Expert>
     private lateinit var sectorViewModel: SectorViewModel
+    private lateinit var userViewModel: UserViewModel
 
 
     override fun onCreateView(
@@ -58,6 +60,8 @@ class ExpertFragment : Fragment() {
     }
 
     private fun retrieveDataFromFirebase(expertAdapter: ExpertAdapter, view: View) {
+        userViewModel = ViewModelProvider(requireActivity())[UserViewModel::class.java]
+
         val reference = FirebaseDatabase.getInstance().reference.child("Expert")
 
         reference.addValueEventListener(object : ValueEventListener {
@@ -69,6 +73,9 @@ class ExpertFragment : Fragment() {
                 for (dataSnapshot in snapshot.children) {
                     val expert: Expert = dataSnapshot.getValue(Expert::class.java)!!
                     list.add(expert)
+                    userViewModel.userId.value = expert.id
+                    userViewModel.userName.value = expert.userName
+                    userViewModel.imageProfile.value = expert.profileImage
                 }
 
                 expertAdapter.notifyDataSetChanged()
@@ -79,6 +86,7 @@ class ExpertFragment : Fragment() {
         })
 
         sectorViewModel = ViewModelProvider(requireActivity())[SectorViewModel::class.java]
+
 
         sectorViewModel.sector.observe(requireActivity()){
             val textSectorCustom = view.findViewById<TextView>(R.id.textSectorCustom)
