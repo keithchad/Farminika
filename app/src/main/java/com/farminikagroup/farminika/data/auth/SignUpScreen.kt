@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.farminikagroup.farminika.R
 import com.farminikagroup.farminika.data.model.ExpertUser
 import com.farminikagroup.farminika.data.model.FarmerUser
+import com.farminikagroup.farminika.data.model.Users
 import com.farminikagroup.farminika.data.utils.Constants
 import com.farminikagroup.farminika.data.utils.Extensions.toast
 import com.farminikagroup.farminika.ui.activity.MainActivity
@@ -116,6 +117,18 @@ class SignUpScreen : AppCompatActivity() {
             databaseReference.setValue(user).addOnSuccessListener {
                 editTextName.text.clear()
                 editTextEmail.text.clear()
+                databaseReference = FirebaseDatabase.getInstance().getReference("Users").child(userId)
+
+                val allUsers = Users(userId, userName, name, profileImage, phoneNumber,
+                email, location, profession)
+
+                databaseReference.setValue(allUsers).addOnSuccessListener {
+                    editTextName.text.clear()
+                    editTextEmail.text.clear()
+                    toast("Data has been successfully saved")
+                }. addOnFailureListener{
+                    toast("Failed to saved Data")
+                }
                 toast("Data has been successfully saved")
             }. addOnFailureListener{
                 toast("Failed to saved Data")
@@ -130,13 +143,23 @@ class SignUpScreen : AppCompatActivity() {
             databaseReference.setValue(user).addOnSuccessListener {
                 editTextName.text.clear()
                 editTextEmail.text.clear()
+                databaseReference = FirebaseDatabase.getInstance().getReference("Users").child(userId)
+
+                val allUsers = Users(userId, userName, name, profileImage, phoneNumber,
+                    email, location, profession)
+
+                databaseReference.setValue(allUsers).addOnSuccessListener {
+                    editTextName.text.clear()
+                    editTextEmail.text.clear()
+                    toast("Data has been successfully saved")
+                }. addOnFailureListener{
+                    toast("Failed to saved Data")
+                }
                 toast("Data has been successfully saved")
             }. addOnFailureListener{
                 toast("Failed to saved Data")
             }
         }
-
-
     }
 
     //Send Email Verification to User Email

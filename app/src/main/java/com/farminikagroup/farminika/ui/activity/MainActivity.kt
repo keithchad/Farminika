@@ -4,6 +4,7 @@ import android.app.FragmentTransaction
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import androidx.fragment.app.FragmentManager
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -28,8 +29,14 @@ class MainActivity : AppCompatActivity() {
         val navHostFragmentManager =
             supportFragmentManager.findFragmentById(R.id.mainContainer) as NavHostFragment
         navController = navHostFragmentManager.navController
-
         setupWithNavController(bottomNavigation, navController)
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            if(destination.id == R.id.action_informationFragment_to_messageFragment) {
+                bottomNavigation.visibility = View.GONE
+            } else {
+                bottomNavigation.visibility = View.VISIBLE
+            }
+        }
     }
 
 
