@@ -17,14 +17,14 @@ import com.google.firebase.database.FirebaseDatabase
 
 class MessageAdapter(
     var context: Context,
-    message: ArrayList<Message>?,
+    list: ArrayList<Message>?,
     senderRoom: String,
     receiverRoom: String
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     lateinit var messages: ArrayList<Message>
-    val ITEM_SENT = 1
-    val ITEM_RECEIVE = 2
+    private val ITEM_SENT = 1
+    private val ITEM_RECEIVE = 2
     var senderRoom: String
     var receiverRoom: String
 
@@ -52,9 +52,9 @@ class MessageAdapter(
         if (holder.javaClass == SendMessageHolder::class.java) {
             val viewHolder = holder as SendMessageHolder
             if (message.message.equals("photo")) {
-                viewHolder.binding.imageMessage.visibility = View.VISIBLE
-                viewHolder.binding.message.visibility = View.GONE
-                viewHolder.binding.linearLayoutMessage.visibility = View.GONE
+//                viewHolder.binding.imageMessage.visibility = View.VISIBLE
+//                viewHolder.binding.message.visibility = View.GONE
+//                viewHolder.binding.linearLayoutMessage.visibility = View.GONE
                 Glide.with(context).load(message.imageUrl)
                     .placeholder(R.drawable.home)
                     .into(viewHolder.binding.imageMessage)
@@ -152,10 +152,6 @@ class MessageAdapter(
         return messages.size
     }
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-    }
-
     inner class SendMessageHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var binding: SendMessageBinding = SendMessageBinding.bind(itemView)
     }
@@ -165,7 +161,7 @@ class MessageAdapter(
     }
 
     init {
-        this.messages = messages
+        this.messages = list!!
         this.senderRoom = senderRoom
         this.receiverRoom = receiverRoom
     }

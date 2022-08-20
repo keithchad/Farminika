@@ -39,12 +39,6 @@
         <action
             android:id="@+id/action_sectorBottomSheet_to_expertFragment"
             app:destination="@id/expertFragment" />
-        <action
-            android:id="@+id/action_sectorBottomSheet_to_informationFragment"
-            app:destination="@id/informationFragment" />
-        <action
-            android:id="@+id/action_sectorBottomSheet_to_expertFragment2"
-            app:destination="@id/expertFragment" />
     </dialog>
     <activity
         android:id="@+id/introScreenActivity"
@@ -57,9 +51,6 @@
         android:label="fragment_expert"
         tools:layout="@layout/fragment_expert" >
         <action
-            android:id="@+id/action_expertFragment_to_messageFragment"
-            app:destination="@id/messageFragment" />
-        <action
             android:id="@+id/action_expertFragment_to_informationFragment"
             app:destination="@id/informationFragment" />
     </fragment>
@@ -67,12 +58,9 @@
         android:id="@+id/informationFragment"
         android:name="com.farminikagroup.farminika.ui.fragment.InformationFragment"
         android:label="fragment_information"
-        tools:layout="@layout/fragment_information" >
+        tools:layout="@layout/fragment_information">
         <action
             android:id="@+id/action_informationFragment_to_messageFragment"
-            app:destination="@id/messageFragment" />
-        <action
-            android:id="@+id/action_informationFragment_to_messageFragment2"
             app:destination="@id/messageFragment" />
     </fragment>
 </navigation>
