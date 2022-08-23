@@ -1,5 +1,6 @@
 package com.farminikagroup.farminika.ui.fragment
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.farminikagroup.farminika.R
@@ -19,8 +21,10 @@ import com.farminikagroup.farminika.data.utils.Constants
 import com.farminikagroup.farminika.data.utils.PreferenceManager
 import com.farminikagroup.farminika.data.viewmodel.InformationViewModel
 import com.farminikagroup.farminika.data.viewmodel.UserViewModel
+import com.farminikagroup.farminika.databinding.DeleteLayoutBinding
 import com.farminikagroup.farminika.databinding.FragmentInformationBinding
 import com.farminikagroup.farminika.databinding.FragmentMessageBinding
+import com.farminikagroup.farminika.databinding.PaymentLayoutBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
@@ -149,6 +153,20 @@ class MessageFragment : Fragment() {
             intent.action = Intent.ACTION_GET_CONTENT
             intent.type = "image/*"
             startActivityForResult(intent, 25)
+        }
+        binding.more.setOnClickListener {
+            val view = LayoutInflater.from(requireActivity()).inflate(R.layout.payment_layout, null)
+            val binding = PaymentLayoutBinding.bind(view)
+            val dialog = AlertDialog.Builder(context).setTitle("Payment Method")
+                .setView(binding.root)
+                .create()
+            binding.mpesaTransfer.setOnClickListener {
+                findNavController().navigate(R.id.action_messageFragment_to_mpesaFragment)
+            }
+            binding.cancel.setOnClickListener {
+                dialog.dismiss()
+            }
+            dialog.show()
         }
         return binding.root
     }

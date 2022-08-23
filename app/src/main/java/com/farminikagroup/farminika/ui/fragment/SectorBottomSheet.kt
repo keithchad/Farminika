@@ -1,4 +1,4 @@
-package com.farminikagroup.farminika.ui
+package com.farminikagroup.farminika.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater

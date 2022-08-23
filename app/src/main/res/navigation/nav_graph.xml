@@ -26,7 +26,11 @@
         android:id="@+id/messageFragment"
         android:name="com.farminikagroup.farminika.ui.fragment.MessageFragment"
         android:label="fragment_message"
-        tools:layout="@layout/fragment_message" />
+        tools:layout="@layout/fragment_message" >
+        <action
+            android:id="@+id/action_messageFragment_to_mpesaFragment"
+            app:destination="@id/mpesaFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.farminikagroup.farminika.ui.fragment.ProfileFragment"
@@ -34,7 +38,7 @@
         tools:layout="@layout/fragment_profile" />
     <dialog
         android:id="@+id/sectorBottomSheet"
-        android:name="com.farminikagroup.farminika.ui.SectorBottomSheet"
+        android:name="com.farminikagroup.farminika.ui.fragment.SectorBottomSheet"
         android:label="SectorBottomSheet" >
         <action
             android:id="@+id/action_sectorBottomSheet_to_expertFragment"
@@ -63,4 +67,9 @@
             android:id="@+id/action_informationFragment_to_messageFragment"
             app:destination="@id/messageFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/mpesaFragment"
+        android:name="com.farminikagroup.farminika.ui.fragment.MpesaFragment"
+        android:label="fragment_mpesa"
+        tools:layout="@layout/fragment_mpesa" />
 </navigation>

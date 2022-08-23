@@ -311,6 +311,16 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/signOutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_out"
+            android:layout_gravity="center"
+            app:backgroundTint="@color/green_700"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
     </LinearLayout>
 
 

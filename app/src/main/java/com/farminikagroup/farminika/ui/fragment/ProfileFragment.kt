@@ -1,16 +1,20 @@
 package com.farminikagroup.farminika.ui.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.farminikagroup.farminika.R
 import com.farminikagroup.farminika.data.model.ExpertUser
 import com.farminikagroup.farminika.data.model.FarmerUser
 import com.farminikagroup.farminika.data.model.Users
+import com.farminikagroup.farminika.ui.activity.IntroScreenActivity
+import com.farminikagroup.farminika.ui.activity.MainActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
@@ -27,7 +31,9 @@ class ProfileFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?): View? {
+        //signOutUser()
         retrieveDataFromFirebase()
+
         return inflater.inflate(R.layout.fragment_profile, container, false)
     }
 
@@ -58,6 +64,17 @@ class ProfileFragment : Fragment() {
             }
 
         })
+    }
+
+    private fun signOutUser() {
+
+        firebaseAuth = Firebase.auth
+
+        signOutButton.setOnClickListener {
+            firebaseAuth.signOut()
+            val intent = Intent(requireActivity(), IntroScreenActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 }

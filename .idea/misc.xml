@@ -24,7 +24,9 @@
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_information.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_message.xml" value="0.16" />
+        <entry key="app/src/main/res/layout/fragment_mpesa.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/payment_layout.xml" value="0.1405982905982906" />
         <entry key="app/src/main/res/layout/receive_message.xml" value="0.33" />
         <entry key="app/src/main/res/layout/sector_layout.xml" value="0.2" />
         <entry key="app/src/main/res/layout/send_message.xml" value="0.22" />

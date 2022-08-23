@@ -29,18 +29,4 @@ class HomeFragment : Fragment() {
         }
         return view
     }
-
-    private fun signOutUser() {
-
-        firebaseAuth = Firebase.auth
-
-        signOutButton.setOnClickListener {
-            firebaseAuth.signOut()
-
-            findNavController().navigate(R.id.action_homeFragment_to_introScreenActivity)
-
-        }
-    }
-
-
 }
