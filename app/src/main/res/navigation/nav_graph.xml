@@ -9,7 +9,14 @@
         android:id="@+id/homeFragment"
         android:name="com.farminikagroup.farminika.ui.fragment.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_sectorBottomSheet"
+            app:destination="@id/sectorBottomSheet" />
+        <action
+            android:id="@+id/action_homeFragment_to_introScreenActivity"
+            app:destination="@id/introScreenActivity" />
+    </fragment>
     <fragment
         android:id="@+id/blogFragment"
         android:name="com.farminikagroup.farminika.ui.fragment.BlogFragment"
@@ -19,10 +26,50 @@
         android:id="@+id/messageFragment"
         android:name="com.farminikagroup.farminika.ui.fragment.MessageFragment"
         android:label="fragment_message"
-        tools:layout="@layout/fragment_message" />
+        tools:layout="@layout/fragment_message" >
+        <action
+            android:id="@+id/action_messageFragment_to_mpesaFragment"
+            app:destination="@id/mpesaFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.farminikagroup.farminika.ui.fragment.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <dialog
+        android:id="@+id/sectorBottomSheet"
+        android:name="com.farminikagroup.farminika.ui.fragment.SectorBottomSheet"
+        android:label="SectorBottomSheet" >
+        <action
+            android:id="@+id/action_sectorBottomSheet_to_expertFragment"
+            app:destination="@id/expertFragment" />
+    </dialog>
+    <activity
+        android:id="@+id/introScreenActivity"
+        android:name="com.farminikagroup.farminika.ui.activity.IntroScreenActivity"
+        android:label="activity_splash_screen"
+        tools:layout="@layout/activity_splash_screen" />
+    <fragment
+        android:id="@+id/expertFragment"
+        android:name="com.farminikagroup.farminika.ui.fragment.ExpertFragment"
+        android:label="fragment_expert"
+        tools:layout="@layout/fragment_expert" >
+        <action
+            android:id="@+id/action_expertFragment_to_informationFragment"
+            app:destination="@id/informationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/informationFragment"
+        android:name="com.farminikagroup.farminika.ui.fragment.InformationFragment"
+        android:label="fragment_information"
+        tools:layout="@layout/fragment_information">
+        <action
+            android:id="@+id/action_informationFragment_to_messageFragment"
+            app:destination="@id/messageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mpesaFragment"
+        android:name="com.farminikagroup.farminika.ui.fragment.MpesaFragment"
+        android:label="fragment_mpesa"
+        tools:layout="@layout/fragment_mpesa" />
 </navigation>

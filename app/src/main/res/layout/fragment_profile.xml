@@ -43,7 +43,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/ubuntu_bold"
-        android:text="Keith Chad"
         android:layout_marginTop="20dp"
         android:layout_marginStart="10dp"
         android:textColor="@color/white"
@@ -57,7 +56,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/ubuntu_regular"
-        android:text="Farmer"
         android:layout_marginStart="10dp"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -159,7 +157,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ubuntu_regular"
-                android:text="Keith Chad"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="@+id/textName"
                 app:layout_constraintTop_toBottomOf="@+id/textName" />
@@ -189,7 +186,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ubuntu_regular"
-                android:text="+254702853776"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="@+id/textNumber"
                 app:layout_constraintTop_toBottomOf="@+id/textNumber" />
@@ -219,7 +215,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ubuntu_regular"
-                android:text="keithchad6@gmail.com"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="@+id/textEmail"
                 app:layout_constraintTop_toBottomOf="@+id/textEmail" />
@@ -249,7 +244,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ubuntu_regular"
-                android:text="Nairobi,Kenya"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="@+id/textLocation"
                 app:layout_constraintTop_toBottomOf="@+id/textLocation" />
@@ -310,13 +304,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ubuntu_regular"
-                android:text="Joined on July 2020"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="@+id/textDateJoined"
                 app:layout_constraintTop_toBottomOf="@+id/textDateJoined" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/signOutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_out"
+            android:layout_gravity="center"
+            app:backgroundTint="@color/green_700"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </LinearLayout>
 

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/mpesaTransfer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="M-PESA Transfer"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:padding="10dp"
+        android:fontFamily="@font/ubuntu_medium"/>
+
+    <TextView
+        android:id="@+id/bankTransfer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bank Transfer"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:padding="10dp"
+        android:fontFamily="@font/ubuntu_medium"/>
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:padding="10dp"
+        android:fontFamily="@font/ubuntu_medium"/>
+
+</LinearLayout>

@@ -53,23 +53,17 @@
     </LinearLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/signOutButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sign_out"
-        android:visibility="gone"
-        app:backgroundTint="@color/green_700"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/lookingBUtton"
+        android:id="@+id/lookingButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/are_you_looking_for_goods_or_services"
         android:fontFamily="@font/ubuntu_medium"
         app:backgroundTint="@color/green_700"
         android:layout_marginTop="20dp"
+        app:cornerRadius="10dp"
+        android:textColor="@color/white"
+        app:strokeColor="@color/white"
+        style="@style/Widget.Material3.Button.OutlinedButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/offeringButton" />
@@ -81,6 +75,10 @@
         android:text="@string/are_you_offering_goods_or_services"
         android:fontFamily="@font/ubuntu_medium"
         android:layout_marginTop="40dp"
+        app:cornerRadius="10dp"
+        android:textColor="@color/white"
+        app:strokeColor="@color/white"
+        style="@style/Widget.Material3.Button.OutlinedButton"
         app:backgroundTint="@color/green_700"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -96,7 +94,7 @@
         android:textColor="@color/white"
         app:iconTint="@color/white"
         app:icon="@drawable/ic_round_article"
-        app:backgroundTint="@color/green_700"
+        app:backgroundTint="#1EBD70"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

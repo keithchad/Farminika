@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/green_500"
-    tools:context=".data.auth.SignUpScreen">
+    android:padding="10dp"
+    tools:context=".ui.fragment.InformationFragment">
 
     <ImageView
         android:id="@+id/imageView"
@@ -37,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/ubuntu_bold"
-        android:text="@string/sign_up_text"
+        android:text="Information"
         android:layout_marginStart="10dp"
         android:textColor="@color/white"
         android:textSize="25sp"
@@ -52,12 +52,25 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="20dp"
-        android:text="@string/provide_text"
+        android:text="Kindly provide us more information on what you require.This information will be sent to "
         android:textColor="@color/white"
         android:textSize="16sp"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signup" />
+
+    <TextView
+        android:id="@+id/expertUserNameInformation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="Keith Chad"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/signUpText"
+        app:layout_constraintStart_toStartOf="@+id/signUpText"
+        app:layout_constraintTop_toBottomOf="@+id/signUpText" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -70,7 +83,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signUpText">
+        app:layout_constraintTop_toBottomOf="@+id/expertUserNameInformation">
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
@@ -78,11 +91,12 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/editTextName"
+                android:id="@+id/editTextJobtitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/name"
+                android:hint="Job Title"
                 android:fontFamily="@font/ubuntu_regular"
+                android:textColor="@color/black"
                 android:layout_marginTop="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -98,10 +112,11 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/editTextEmail"
+                android:id="@+id/editTextDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/email"
+                android:hint="Description"
+                android:textColor="@color/black"
                 android:fontFamily="@font/ubuntu_regular"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -118,12 +133,13 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/editTextPassword"
+                android:id="@+id/editTextBudget"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/password"
+                android:hint="Budget"
                 android:fontFamily="@font/ubuntu_regular"
-                android:inputType="textPassword"
+                android:inputType="number"
+                android:textColor="@color/black"
                 android:layout_marginTop="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -134,15 +150,16 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/inputLayoutExpertise"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <AutoCompleteTextView
-                android:id="@+id/dropdownSector"
+            <EditText
+                android:id="@+id/editTextLocation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Sector"
+                android:hint="Location"
+                android:textColor="@color/black"
                 android:fontFamily="@font/ubuntu_regular"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -153,38 +170,17 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/inputLayoutEducation"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <EditText
-                android:id="@+id/editTextEducation"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/education"
-                android:fontFamily="@font/ubuntu_regular"
-                android:layout_marginTop="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
-                android:autofillHints="name"
-                android:inputType="text" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp">
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/signupButton"
+                android:id="@+id/submitInfoButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/ubuntu_medium"
-                android:text="@string/sign_uplarge"
+                android:text="SUBMIT INFO"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -200,33 +196,6 @@
                 app:layout_constraintTop_toTopOf="@+id/signupButton" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-        <TextView
-            android:id="@+id/signUp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/ubuntu_bold"
-            android:text="@string/already_have_an_account"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="@+id/signinButton"
-            app:layout_constraintStart_toStartOf="@+id/signinButton"
-            app:layout_constraintTop_toBottomOf="@+id/signinButton" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/textSignIn"
-            style="@style/Widget.Material3.Button.TextButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/ubuntu_regular"
-            android:text="@string/sign_in_text"
-            android:textColor="@color/green_500"
-            android:textSize="16sp" />
 
     </LinearLayout>
 

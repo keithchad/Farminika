@@ -4,18 +4,32 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-v24/rounded_corners_white_welcome.xml" value="0.179" />
+        <entry key="app/src/main/res/drawable/receiver_drawable.xml" value="0.18" />
         <entry key="app/src/main/res/drawable/rounded_corners.xml" value="0.179" />
         <entry key="app/src/main/res/drawable/rounded_corners_white.xml" value="0.18" />
+        <entry key="app/src/main/res/drawable/send_drawable.xml" value="0.179" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_sign_in_screen.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_sign_up_screen.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_starting_screen.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_welcome_screen.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/blog_item.xml" value="0.25" />
         <entry key="app/src/main/res/layout/bottom_sheet_layout.xml" value="0.17135416666666667" />
-        <entry key="app/src/main/res/layout/fragment_blog.xml" value="0.17135416666666667" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.17135416666666667" />
+        <entry key="app/src/main/res/layout/delete_layout.xml" value="0.13974358974358975" />
+        <entry key="app/src/main/res/layout/drop_down_list_item.xml" value="0.1405982905982906" />
+        <entry key="app/src/main/res/layout/expert_list_item.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_blog.xml" value="0.11392405063291139" />
+        <entry key="app/src/main/res/layout/fragment_expert.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_information.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_message.xml" value="0.16" />
+        <entry key="app/src/main/res/layout/fragment_mpesa.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/payment_layout.xml" value="0.1405982905982906" />
+        <entry key="app/src/main/res/layout/receive_message.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/sector_layout.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/send_message.xml" value="0.22" />
         <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.17135416666666667" />
       </map>
     </option>

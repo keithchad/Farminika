@@ -1,13 +1,12 @@
 <resources>
     <string name="app_name">Farminika</string>
     <string name="cd_logo_image">logo_image</string>
-    <string name="welcome_description">Farminika is a platform that helps farmers to connect to Experts. Are you an Expert or a Farmer?</string>
+    <string name="welcome_description">Farminika is a platform that helps farmers to connect to Agricultural Extension Officers. Are you an Agricultural Extension Officers or a Farmer?</string>
     <string name="welcome">Welcome</string>
     <string name="farminika_name">F A R M I N I K A</string>
     <string name="back">back</string>
     <string name="sign_up_text">Sign Up</string>
     <string name="education">Education</string>
-    <string name="area_of_expertise">Area of Expertise</string>
     <string name="password">Password</string>
     <string name="email">Email</string>
     <string name="name">Name</string>
@@ -16,7 +15,7 @@
     <string name="sign_in_text">Sign In</string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="farmer">FARMER</string>
-    <string name="expert">EXPERT</string>
+    <string name="expert">OFFICER</string>
     <string name="provide_text">Please provide us with the following details inorder to register you.</string>
     <string name="provide_text_1">Please help us with your email and password for verification.</string>
     <string name="sign_in_large">SIGN IN</string>
@@ -29,4 +28,5 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="account_info">Account Info</string>
+    <string name="dsc_send_button">dsc_send_button</string>
 </resources>
